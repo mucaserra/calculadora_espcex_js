@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Concurso Espcex Cálculo</title>
+
+        <style>
+                body{font-family: Arial, Helvetica, sans-serif; background-color: white; text-align: center;}
+                .content{display: flex;justify-content: center;}
+                .calculo{width: 100%;max-width: 500px;}
+                .form{display: flex;flex-direction: column;}
+                #n1,#n2,#n3,#n4,#n5,#n6,#n7{padding: 10px; margin-bottom: .8em; border: 1px solid #DDD; border-radius: 5em;font-family: Arial, Helvetica, sans-serif; font-size: 2em; text-align: center;}
+                .title{font-size: 3em;text-align: center;text-transform:uppercase; line-height: 1.2em;}
+                .subtitle{font-size: 1.5em;text-align: center; text-transform:uppercase; line-height: .2em; margin-bottom: 3em;}
+                h3{font-size: 1em;text-transform: uppercase; margin: 0 0 0 1em;}
+                #button{font-size: 2em; font-weight:700 ; border-radius: 3em;padding: .5em;text-transform: uppercase;background-color: rgb(232, 248, 3);color: rgb(24, 24, 24);}
+                .resultado{display: inline-block; padding: 10px; margin-bottom: 15px; border: 1px solid #DDD; border-radius: 5em;font-family: Arial, Helvetica, sans-serif; font-size: 2em; height: 1.5em; margin-bottom: 2em; padding: .5em 0 0 0;}
+
+        </style>
+
+    </head>
+    <body>
+        
+       
+        <h1 class="title">Calcule sua nota</h1>
+        <h2 class="subtitle">EXPCEX 2021/2022</h2>
+        <section class="content">
+            <div class="form">
+                <h3>Português</h3><br />
+                <input id="n1" type="number" /><br />
+                <h3>Matemática</h3><br />
+                <input id="n2" type="number"  /><br />
+                <h3>Física</h3><br />
+                <input id="n3" type="number" /><br />
+                <h3>Inglês</h3><br />
+                <input id="n4" type="number" /><br />
+                <h3>História</h3><br />
+                <input id="n5" type="number" /><br />
+                <h3>Geografia</h3><br />
+                <input id="n6" type="number" /><br />
+                <h3>Química</h3><br />
+                <input id="n7" type="number" /><br /><br />
+                
+                <button id="button" onclick="somar ();">Calcular</button>
+                <br /><br />
+                <h2>O resultado é</h2><span class="resultado"></span>
+            </div>
+        </section>
+        
+        <script>
+            var n1 = document.querySelector("#n1")
+            var n2 = document.querySelector("#n2")
+            var n3 = document.querySelector("#n3")
+            var n4 = document.querySelector("#n4")
+            var n5 = document.querySelector("#n5")
+            var n6 = document.querySelector("#n6")
+            var n7 = document.querySelector("#n7")
+            var resultado = document.querySelector(".resultado"); parseFloat (resultado.toFixed(2))
+
+            function somar(){
+                
+                resultado.innerHTML = ( ((2 * (parseInt(n1.value))) / 2) + ((2 * (parseInt(n2.value))) / 2) + ((1.5 * (10 * (parseInt(n3.value)))) / 12) + ((1.5 * (10 * (parseInt(n4.value)))) / 12) + ((10 * (parseInt(n5.value))) / 12) + ((10 * (parseInt(n6.value))) / 12) + ((10 * (parseInt(n7.value))) / 12) ) / 10; 
+            }
+        </script>
+    </body>
+
+
+</html>
